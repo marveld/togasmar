@@ -1,0 +1,18 @@
+* {
+	box-sizing: border-box;
+}
+ .yellow{
+   background-color: #FFEB45;
+   color: #140C3B;
+ }
+.amarillo{
+  color: #FFEA45;
+}
+
+.rosa{
+  color:#FF617F;
+}
+.logo{
+	float: left;
+	width: 100%;
+}
