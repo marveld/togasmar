@@ -44,23 +44,25 @@ include 'arrays.php';
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
+                <a class="navbar-brand page-scroll" href="#page-top"></a>
 
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
-                  <a class="navbar-brand" href="#page-top">Optimizá tus envíos</a>
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#intro">Inicio</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#about">¿Qué es?</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#download">Registrate</a>
+                        <a class="page-scroll" href="#registro">Registrate</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Ingresá</a>
@@ -76,7 +78,7 @@ include 'arrays.php';
     </nav>
 
     <!-- Intro Header -->
-    <header class="intro">
+    <header class="intro" id="intro">
         <div class="intro-body">
             <div class="container">
                 <div class="row">
@@ -197,7 +199,7 @@ include 'arrays.php';
                             <div class="col-sm-9 col-md-offset-2">
                               <select class="form-control" name="modelo">
                 								<option value="">Modelo</option>
-                								<?php for($anio = date('Y'); $anio >= (date('Y')-100); $anio--){?>
+                								<?php for($anio = date('Y'); $anio >= (date('Y')-50); $anio--){?>
                 									<option value="<?php echo $anio; ?>"><?php echo $anio; ?></option>
                 									<?php } ?>
                 							</select>
@@ -265,18 +267,18 @@ include 'arrays.php';
     <script>
     $(document).ready(function(){
         $("#quieroRegistrarme").click(function(){
-            $("#quieroRegistrarme").toggle(80);
-            $("#opcionesRegistro").toggle(80);
+            $("#quieroRegistrarme").toggle(180);
+            $("#opcionesRegistro").toggle(180);
         });
 
         $("#registrarCliente").click(function(){
-          $("#registroProveedor").hide(80);
-          $("#registroCliente").show(80);
+          $("#registroProveedor").hide(180);
+          $("#registroCliente").show(180);
         });
 
         $("#registrarProveedor").click(function(){
-            $("#registroProveedor").show(80);
-            $("#registroCliente").hide(80);
+            $("#registroProveedor").show(180);
+            $("#registroCliente").hide(180);
         });
 
     });
