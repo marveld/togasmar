@@ -105,127 +105,122 @@ include 'arrays.php';
         </div>
     </section>
 
-    <!-- Download Section -->
-    <section id="download" class="content-section text-center">
-        <div class="download-section">
+    <!-- Seccion de registro -->
+    <section id="registro" class="content-section text-center">
+        <div class="registro-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>Registrate</h2>
                     <p>¡Es Gratis! Sólo te tomará unos segundos.</p>
 
-                    <a class="btn btn-default btn-lg" id="quieroRegistrarme">Quiero registrarme ya</a>
+                    <a class="btn btn-primary btn-lg" id="quieroRegistrarme">Quiero registrarme ya</a>
                     <div id="opcionesRegistro" class="oculto">
-                      <a href="#" class="btn btn-default btn-lg" id="registrarProveedor">Ofrezco mis servicios</a>
-                      <a href="#" class="btn btn-default btn-lg" id="registrarCliente">Tengo que mandar algo</a>
+                      <a class="btn btn-primary btn-lg" id="registrarProveedor">Ofrezco mis servicios <i class="fa fa-angle-double-down animated"></i></a>
+                      <a class="btn btn-primary btn-lg" id="registrarCliente">Tengo que mandar algo <i class="fa fa-angle-double-down animated"></i></a>
                     </div>
 
                     <!-- Registro de CLIENTE -->
-                    <div class="col-md-4 col-md-offset-1 oculto" id="registroCliente">
-                        <h1 class="logo"><img src="img/logo.png" alt="Win Your Shipping" width="100%"></h1>
+                    <div class="col-md-9 col-md-offset-2 oculto" id="registroCliente">
                         <p class="intro-text">¿Tenés que mandar algo?<br>Cargá tus datos abajo y elegí la mejor propuesta</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
                         <form role="form" action="" method="post" enctype="multipart/form-data">
                           <div class="row">
-                            <div class="col-md-12 col-md-offset-0">
-                              <label for="nombre">Nombre</label>
-                                <input type="text" class="form-control" placeholder="Ingrese Nombre">
+                            <div class="form-group">
+                              <label for="nombre" class="col-sm-2 control-label">Nombre</label>
+                              <div class="col-sm-10">  <input id="nombre" type="text" class="form-control" placeholder="Ingrese Nombre">    </div>
                             </div>
-                            <div class="col-md-12 col-md-offset-0">
-                              <label for="nombre">Apellido</label>
-                                <input type="text" class="form-control" placeholder="Ingrese Apellido">
-                            </div>
-                            <div class="col-md-12 col-md-offset-0">
-                              <label for="nombre">DNI</label>
-                                <input type="text" class="form-control" placeholder="DNI">
-                            </div>
-                            <div class="col-md-12 col-md-offset-0">
-                              <label for="nombre">e-mail</label>
-                                <input type="text" class="form-control" placeholder="Ingrese e-mail">
-                            </div>
-                            <div class="col-md-12 col-md-offset-0">
-                              <label for="nombre">Localidad</label>
-                                <input type="text" class="form-control" placeholder="Ingrese Localidad">
-                            </div>
-                            <div class="col-md-12 col-md-offset-0">
-                              <label for="nombre">Codigo Postal</label>
-                                <input type="text" class="form-control" placeholder="Ingrese CP">
-                            </div>
+                                <div class="form-group">
+                                  <label class="col-sm-2 control-label" for="apellido">Apellido</label>
+                                <div class="col-sm-10"><input id="apellido" type="text" class="form-control" placeholder="Ingrese Apellido"></div>
+                              </div>
+                                <div class="form-group">
+                                  <label class="col-sm-2 control-label" for="dni">DNI</label>
+                                <div class="col-sm-10"><input id="dni" type="text" class="form-control" placeholder="DNI"></div>
+                              </div>
+                                <div class="form-group">
+                                  <label class="col-sm-2 control-label" for="email">e-mail</label>
+                                <div class="col-sm-10"><input id="email" type="email" class="form-control" placeholder="Ingrese e-mail"></div>
+                              </div>
+                                <div class="form-group">
+                                  <label class="col-sm-2 control-label" for="localidad">Localidad</label>
+                                <div class="col-sm-10"><input id="localidad" type="text" class="form-control" placeholder="Ingrese Localidad"></div>
+                              </div>
+                                <div class="form-group">
+                                  <label class="col-sm-2 control-label" for="cp">Codigo Postal</label>
+                                <div class="col-sm-10"><input id="cp" type="text" class="form-control" placeholder="Ingrese CP"></div>
+                              </div>
+
+                            <div class="form-group">
+                                <button type="button" class="btn btn-success btn-lg" aria-label="Left Align">
+                                    <span class="fa fa-floppy-o" aria-hidden="true"></span> Enviar
+                                </button>
+                              </div>
                           </div>
                         </form>
                     </div>
                     <!-- Fin registro de CLIENTE -->
 
                     <!-- Registro de PROVEEDOR -->
-                    <div class="col-md-4 col-md-offset-2 oculto" id="registroProveedor">
-                        <h1 class="logo"><img src="img/logo.png" alt="Win Your Shipping" width="100%"></h1>
-                        <p class="intro-text">¿Tenés moto, auto, flete, camioneta, camion, etc.?<br>Cargá tus datos abajo y ofrecé el servicio que quieras</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                        <form role="form" action="" method="post" enctype="multipart/form-data">
+                    <div class="col-md-9 col-md-offset-2 oculto" id="registroProveedor">
+                        <p class="intro-text">¿Tenés moto, auto, flete, etc.?<br>Cargá tus datos abajo y ofrecé el servicio que quieras</p>
+                        <form  class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
                           <div class="row">
-                            <div class="col-md-12 col-md-offset-0">
-                              <label for="nombre">Nombre</label>
-                                <input type="text" class="form-control" placeholder="Ingrese Nombre">
+                            <div class="form-group">
+                              <label class="col-sm-2 control-label" for="nombre">Nombre</label>
+                                <div class="col-sm-10"> <input type="text" class="form-control" placeholder="Ingrese Nombre"></div>
+                                  <label class="col-sm-2 control-label" for="nombre">Apellido</label>
+                                <div class="col-sm-10"> <input type="text" class="form-control" placeholder="Ingrese Apellido"></div>
+                                  <label class="col-sm-2 control-label" for="nombre">DNI</label>
+                                <div class="col-sm-10"> <input type="text" class="form-control" placeholder="DNI"></div>
+                                  <label class="col-sm-2 control-label" for="nombre">e-mail</label>
+                                <div class="col-sm-10"> <input type="text" class="form-control" placeholder="Ingrese e-mail"></div>
                             </div>
-                            <div class="col-md-12 col-md-offset-0">
-                              <label for="nombre">Apellido</label>
-                                <input type="text" class="form-control" placeholder="Ingrese Apellido">
-                            </div>
-                            <div class="col-md-12 col-md-offset-0">
-                              <label for="nombre">DNI</label>
-                                <input type="text" class="form-control" placeholder="DNI">
-                            </div>
-                            <div class="col-md-12 col-md-offset-0">
-                              <label for="nombre">e-mail</label>
-                                <input type="text" class="form-control" placeholder="Ingrese e-mail">
-                            </div>
-                  <div class="col-md-12 col-md-offset-0">
+
                   <div class="form-group">
                    <label>Tipo de Vehiculo</label>
                        <div class="row">
-                         <div class="col-sm-12">
-                            <select class="form-control" name="vehiculos">
-                               <option value="1">Drone</option>
-                               <option value="2">Moto</option>
-                               <option value="3">Auto</option>
-                               <option value="4">Camioneta</option>
-                               <option value="5">Camion</option>
-                            </select>
+                         <div class="col-sm-9 col-md-offset-2">
+                           <select class="form-control" name="vehiculo">
+                             <option value="">Vehiculo</option>
+                             <?php foreach($vehiculos as $numero => $nombre){?>
+                               <option value="<?php echo $numero; ?>"><?php echo $nombre; ?></option>
+                               <?php } ?>
+                           </select>
                          </div>
-                                <div class="col-sm-12">
-                                   <select class="form-control" name="fnac_mes">
-                                      <option value="">Ford</option>
-                                      <option value="">Peugeot</option>
-                                      <option value="">Susuki</option>
-                                      <option value="">Fiat</option>
-                                      <option value="">Honda</option>
-                                      <option value="">Toyota</option>
-                                      <option value="">VolksWagen</option>
-                                      <option value="">Otro</option>
-                                   </select>
+                                <div class="col-sm-9 col-md-offset-2">
+                                  <select class="form-control" name="marca">
+                                    <option value="">Marca</option>
+                                    <?php foreach($marcasAutos as $numero => $nombre){?>
+                                      <option value="<?php echo $numero; ?>"><?php echo $nombre; ?></option>
+                                      <?php } ?>
+                                  </select>
                                 </div>
-                            <div class="form-group">
-                                 <label for="descripcion">Modelo</label>
-                                   <textarea id="descripcion" name="descripcion" class="form-control" rows="5"></textarea>
+                            <div class="col-sm-9 col-md-offset-2">
+                              <select class="form-control" name="modelo">
+                								<option value="">Modelo</option>
+                								<?php for($anio = date('Y'); $anio >= (date('Y')-100); $anio--){?>
+                									<option value="<?php echo $anio; ?>"><?php echo $anio; ?></option>
+                									<?php } ?>
+                							</select>
                             </div>
                            </div>
                         </div>
-                      </div>
-                              <label class="col-md-12 col-md-offset-0">Alcance del servicio:
+                        <div class="form-group">
+                              <label>Alcance del servicio:
                                    <div class="checkbox">
-                                       <input type="checkbox">Todo el País<br></input>
-                                       <input type="checkbox">Capital Federal<br></input>
-                                       <input type="checkbox">GBA<br></input>
-                                       <input type="checkbox">Rosario<br></input>
-                                       <input type="checkbox">Santa Fe<br></input>
-                                       <input type="checkbox">Cordoba<br></input>
-                                       <input type="checkbox">Interior<br></input>
+                                       <?php foreach($alcances as $numero => $nombre){?>
+                                           <label>
+                                             <input type="checkbox" name="alcance[]" value="<?php echo $numero; ?>">
+                                             <?php echo $nombre; ?>
+                                           	</label>
+                                         <?php } ?>
                                    </div>
                               </label>
-                          </div>
+                        </div>
+
+                          <br>
+                                <button type="button" class="btn btn-success btn-lg" aria-label="Left Align">
+                                    <span class="fa fa-floppy-o" aria-hidden="true"></span> Enviar
+                                </button>
                         </form>
                     </div>
                   <!-- Fin Registro de PROVEEDOR -->
@@ -276,11 +271,12 @@ include 'arrays.php';
 
         $("#registrarCliente").click(function(){
           $("#registroProveedor").hide(80);
-          $("#registroPCliente").show(80);
+          $("#registroCliente").show(80);
         });
+
         $("#registrarProveedor").click(function(){
             $("#registroProveedor").show(80);
-            $("#registroPCliente").hide(80);
+            $("#registroCliente").hide(80);
         });
 
     });

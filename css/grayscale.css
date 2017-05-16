@@ -222,7 +222,7 @@ a:focus {
 .content-section {
   padding-top: 100px;
 }
-.download-section {
+.registro-section {
   width: 100%;
   padding: 50px 0;
   color: white;
@@ -241,7 +241,7 @@ a:focus {
   .content-section {
     padding-top: 250px;
   }
-  .download-section {
+  .registro-section {
     padding: 100px 0;
   }
   #map {

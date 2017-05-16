@@ -9,9 +9,12 @@
 
 ## Creadores
 
-El desarrollo de esta red social corre por cuenta (de momento) por:
+El desarrollo de esta red social corre por cuenta de:
+
 Tomas Etchart
+
 Gastón Gracis
+
 Martín Velazquez
 
 ## Licencia
