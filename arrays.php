@@ -4,5 +4,5 @@ $marcasAutos = [1 => 'Ford', 2 => 'Renault', 3 => 'Peugot', 4 => 'Honda', 5 => '
 $marcasMotos = [1 => 'Zanella', 2 => 'Izusu', 3 => 'Honda', 4 => 'Suzuki', 5 => 'Yamaha', 6 => 'Otra'];
 $patente = [];
 $seguro = [1 => 'Allianze', 2=> 'Surich', 3 => 'QBE', 4 => 'Rio Seguros', 5 => 'Otro'];
-$alcances = [0 => 'Capital', 1 => 'GBA', 2 => 'Buenos Aires', 3 => 'Cordoba Capital', 4 => 'Rosario', 5 => 'Mendoza', 6 => 'Interior'];
+$alcances = [0 => 'CABA', 1 => 'GBA', 2 => 'Buenos Aires', 3 => 'Cordoba Capital', 4 => 'Rosario', 5 => 'Mendoza', 6 => 'Interior'];
 ?>

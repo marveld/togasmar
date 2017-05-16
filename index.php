@@ -206,7 +206,7 @@ include 'arrays.php';
                         </div>
                         <div class="form-group">
                               <label>Alcance del servicio:
-                                   <div class="checkbox">
+                                   <div class="checkbox col-sm-9 col-md-offset-2">
                                        <?php foreach($alcances as $numero => $nombre){?>
                                            <label>
                                              <input type="checkbox" name="alcance[]" value="<?php echo $numero; ?>">
