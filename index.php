@@ -1,5 +1,6 @@
 <?php
 include 'arrays.php';
+
  ?>
 <!DOCTYPE html>
 <html>
@@ -37,45 +38,7 @@ include 'arrays.php';
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top"></a>
-
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#intro">Inicio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">¿Qué es?</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#registro">Registrate</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Ingresá</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#faq">Preguntas Frecuentes</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <?php include "includes/menu.php" ?>
 
     <!-- Intro Header -->
     <header class="intro" id="intro">
@@ -108,22 +71,19 @@ include 'arrays.php';
     </section>
 
     <!-- Seccion de registro -->
-    <section id="registro" class="content-section text-center">
+    <section class="content-section text-center"  id="registro" >
         <div class="registro-section">
             <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-8 col-lg-offset-2" >
                     <h2>Registrate</h2>
                     <p>¡Es Gratis! Sólo te tomará unos segundos.</p>
 
-                    <a class="btn btn-primary btn-lg" id="quieroRegistrarme">Quiero registrarme ya</a>
-                    <div id="opcionesRegistro" class="oculto">
-                      <a class="btn btn-primary btn-lg" id="registrarProveedor">Ofrezco mis servicios <i class="fa fa-angle-double-down animated"></i></a>
-                      <a class="btn btn-primary btn-lg" id="registrarCliente">Tengo que mandar algo <i class="fa fa-angle-double-down animated"></i></a>
-                    </div>
+                    <a class="btn btn-primary btn-lg" id="quieroRegistrarme">Quiero registrarme ya!</a>
 
-                    <!-- Registro de CLIENTE -->
-                    <div class="col-md-9 col-md-offset-2 oculto" id="registroCliente">
-                        <p class="intro-text">¿Tenés que mandar algo?<br>Cargá tus datos abajo y elegí la mejor propuesta</p>
+
+                    <!-- Registro CORTITO -->
+                    <div class="col-md-9 col-md-offset-2 oculto" id="registroCortito">
+    
                         <form role="form" action="" method="post" enctype="multipart/form-data">
                           <div class="row">
                             <div class="form-group">
@@ -134,22 +94,12 @@ include 'arrays.php';
                                   <label class="col-sm-2 control-label" for="apellido">Apellido</label>
                                 <div class="col-sm-10"><input id="apellido" type="text" class="form-control" placeholder="Ingrese Apellido"></div>
                               </div>
-                                <div class="form-group">
-                                  <label class="col-sm-2 control-label" for="dni">DNI</label>
-                                <div class="col-sm-10"><input id="dni" type="text" class="form-control" placeholder="DNI"></div>
-                              </div>
+
                                 <div class="form-group">
                                   <label class="col-sm-2 control-label" for="email">e-mail</label>
                                 <div class="col-sm-10"><input id="email" type="email" class="form-control" placeholder="Ingrese e-mail"></div>
                               </div>
-                                <div class="form-group">
-                                  <label class="col-sm-2 control-label" for="localidad">Localidad</label>
-                                <div class="col-sm-10"><input id="localidad" type="text" class="form-control" placeholder="Ingrese Localidad"></div>
-                              </div>
-                                <div class="form-group">
-                                  <label class="col-sm-2 control-label" for="cp">Codigo Postal</label>
-                                <div class="col-sm-10"><input id="cp" type="text" class="form-control" placeholder="Ingrese CP"></div>
-                              </div>
+
 
                             <div class="form-group">
                                 <button type="button" class="btn btn-success btn-lg" aria-label="Left Align">
@@ -159,73 +109,9 @@ include 'arrays.php';
                           </div>
                         </form>
                     </div>
-                    <!-- Fin registro de CLIENTE -->
+                    <!-- Fin registro CORTITO -->
 
-                    <!-- Registro de PROVEEDOR -->
-                    <div class="col-md-9 col-md-offset-2 oculto" id="registroProveedor">
-                        <p class="intro-text">¿Tenés moto, auto, flete, etc.?<br>Cargá tus datos abajo y ofrecé el servicio que quieras</p>
-                        <form  class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
-                          <div class="row">
-                            <div class="form-group">
-                              <label class="col-sm-2 control-label" for="nombre">Nombre</label>
-                                <div class="col-sm-10"> <input type="text" class="form-control" placeholder="Ingrese Nombre"></div>
-                                  <label class="col-sm-2 control-label" for="nombre">Apellido</label>
-                                <div class="col-sm-10"> <input type="text" class="form-control" placeholder="Ingrese Apellido"></div>
-                                  <label class="col-sm-2 control-label" for="nombre">DNI</label>
-                                <div class="col-sm-10"> <input type="text" class="form-control" placeholder="DNI"></div>
-                                  <label class="col-sm-2 control-label" for="nombre">e-mail</label>
-                                <div class="col-sm-10"> <input type="text" class="form-control" placeholder="Ingrese e-mail"></div>
-                            </div>
 
-                  <div class="form-group">
-                   <label>Tipo de Vehiculo</label>
-                       <div class="row">
-                         <div class="col-sm-9 col-md-offset-2">
-                           <select class="form-control" name="vehiculo">
-                             <option value="">Vehiculo</option>
-                             <?php foreach($vehiculos as $numero => $nombre){?>
-                               <option value="<?php echo $numero; ?>"><?php echo $nombre; ?></option>
-                               <?php } ?>
-                           </select>
-                         </div>
-                                <div class="col-sm-9 col-md-offset-2">
-                                  <select class="form-control" name="marca">
-                                    <option value="">Marca</option>
-                                    <?php foreach($marcasAutos as $numero => $nombre){?>
-                                      <option value="<?php echo $numero; ?>"><?php echo $nombre; ?></option>
-                                      <?php } ?>
-                                  </select>
-                                </div>
-                            <div class="col-sm-9 col-md-offset-2">
-                              <select class="form-control" name="modelo">
-                								<option value="">Modelo</option>
-                								<?php for($anio = date('Y'); $anio >= (date('Y')-50); $anio--){?>
-                									<option value="<?php echo $anio; ?>"><?php echo $anio; ?></option>
-                									<?php } ?>
-                							</select>
-                            </div>
-                           </div>
-                        </div>
-                        <div class="form-group">
-                              <label>Alcance del servicio:
-                                   <div class="checkbox col-sm-9 col-md-offset-2">
-                                       <?php foreach($alcances as $numero => $nombre){?>
-                                           <label>
-                                             <input type="checkbox" name="alcance[]" value="<?php echo $numero; ?>">
-                                             <?php echo $nombre; ?>
-                                           	</label>
-                                         <?php } ?>
-                                   </div>
-                              </label>
-                        </div>
-
-                          <br>
-                                <button type="button" class="btn btn-success btn-lg" aria-label="Left Align">
-                                    <span class="fa fa-floppy-o" aria-hidden="true"></span> Enviar
-                                </button>
-                        </form>
-                    </div>
-                  <!-- Fin Registro de PROVEEDOR -->
 
 
 
@@ -267,19 +153,11 @@ include 'arrays.php';
     <script>
     $(document).ready(function(){
         $("#quieroRegistrarme").click(function(){
-            $("#quieroRegistrarme").toggle(180);
-            $("#opcionesRegistro").toggle(180);
+            $("#quieroRegistrarme").toggle();
+            $("#registroCortito").toggle();
         });
 
-        $("#registrarCliente").click(function(){
-          $("#registroProveedor").hide(180);
-          $("#registroCliente").show(180);
-        });
 
-        $("#registrarProveedor").click(function(){
-            $("#registroProveedor").show(180);
-            $("#registroCliente").hide(180);
-        });
 
     });
     </script>
