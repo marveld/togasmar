@@ -26,7 +26,7 @@
                     <a class="page-scroll" href="#registro">Registrate</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">Ingresá</a>
+                    <a class="page-scroll" href="#contact" id="btn_login">Ingresá</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="#faq" title="Preguntas Frecuentes">FAQ</a>

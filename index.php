@@ -1,6 +1,5 @@
 <?php
 include 'arrays.php';
-
  ?>
 <!DOCTYPE html>
 <html>
@@ -39,6 +38,10 @@ include 'arrays.php';
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <?php include "includes/menu.php" ?>
+
+    <div class="col-md-3 col-md-offset-2 oculto" id="login">
+      <?php include "includes/login.php" ?>
+    </div>
 
     <!-- Intro Header -->
     <header class="intro" id="intro">
@@ -83,7 +86,7 @@ include 'arrays.php';
 
                     <!-- Registro CORTITO -->
                     <div class="col-md-9 col-md-offset-2 oculto" id="registroCortito">
-    
+
                         <form role="form" action="" method="post" enctype="multipart/form-data">
                           <div class="row">
                             <div class="form-group">
@@ -157,7 +160,9 @@ include 'arrays.php';
             $("#registroCortito").toggle();
         });
 
-
+        $("#btn_login").click(function(){
+            $("#login").toggle();
+        });
 
     });
     </script>
